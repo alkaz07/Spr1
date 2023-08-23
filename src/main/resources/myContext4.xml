@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="pers3" class = "abcd.Person">
+        <constructor-arg value="Masha"/>
+    </bean>
+    <bean id="pers4" class = "abcd.Person">
+        <constructor-arg value="Lena"/>
+    </bean>
+    <bean id ="car5" class = "abcd.Car">
+        <constructor-arg name="name" value="Beatle"/>
+        <constructor-arg name="speed" value="170"/>
+        <property name="driver" ref="pers4"/>
+    </bean>
+    <bean id ="car6" class = "abcd.Car">
+        <constructor-arg name="name" value="Oka"/>
+        <constructor-arg name="speed" value="120"/>
+        <property name="driver" ref="pers3"/>
+    </bean>
+
+    <bean id ="gar" class="abcd.Garage">
+        <property name="cars">
+            <list>
+                <ref bean="car6"></ref>
+                <ref bean="car5"/>
+                <bean id="car7" class="abcd.Car">
+                    <constructor-arg name="name" value="Mini"/>
+                    <constructor-arg name="speed" value="210"/>
+                </bean>
+
+            </list>
+        </property>
+
+    </bean>
+
+
+</beans>

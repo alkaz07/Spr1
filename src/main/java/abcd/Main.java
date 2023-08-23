@@ -5,7 +5,25 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
        //exemple2();
-       exemple5();
+       exemple7();
+    }
+
+    private static void exemple7() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("myContext5.xml");
+
+        Hangar hangar= context.getBean("hangar", Hangar.class);
+        System.out.println(hangar);
+
+        context.close();
+    }
+
+    private static void exemple6() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("myContext4.xml");
+
+        Garage gar = context.getBean("gar", Garage.class);
+        System.out.println(gar);
+
+        context.close();
     }
 
     private static void exemple3() {

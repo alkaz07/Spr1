@@ -1,6 +1,6 @@
 package abcd;
 
-public class Car {
+public class Car extends Transport{
     private String name;
     private int speed;
     private Person driver;
