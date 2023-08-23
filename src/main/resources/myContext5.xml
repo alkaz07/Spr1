@@ -26,7 +26,8 @@
     </bean>
 
     <bean id="hangar" class="abcd.Hangar">
-        <property name="adr" value="Marsovo Pole"/>
+        <constructor-arg value="Dvotsovaya Sq"/>
+       <!-- <property name="adr" value="Marsovo Pole"/>-->
         <property name="transports">
             <list>
                 <ref bean="car6"/>

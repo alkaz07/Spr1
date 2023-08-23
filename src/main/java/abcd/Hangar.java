@@ -5,6 +5,13 @@ import java.util.ArrayList;
 public class Hangar {
     String adr;
 
+    public Hangar() {
+    }
+
+    public Hangar(String adr) {
+        this.adr = adr;
+    }
+
     public void setAdr(String adr) {
         this.adr = adr;
     }
